@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 Uber Technologies, Inc.
+ * Copyright 2016-2017, 2020 Uber Technologies, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,6 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-#if 0 //mjc
 #ifndef M_PI
 /** pi */
 #define M_PI 3.14159265358979323846
@@ -30,14 +29,13 @@
 /** pi / 2.0 */
 #define M_PI_2 1.5707963267948966
 #endif
-#endif
 
 /** 2.0 * PI */
 #define M_2PI 6.28318530717958647692528676655900576839433L
 
 /** pi / 180 */
 #define M_PI_180 0.0174532925199432957692369076848861271111L
-/** pi * 180 */
+/** 180 / pi */
 #define M_180_PI 57.29577951308232087679815481410517033240547L
 
 /** threshold epsilon */
@@ -80,7 +78,9 @@
 #define NUM_PENTAGONS 12
 
 /** H3 index modes */
-#define H3_HEXAGON_MODE 1
-#define H3_UNIEDGE_MODE 2
+#define H3_CELL_MODE 1
+#define H3_DIRECTEDEDGE_MODE 2
+#define H3_EDGE_MODE 3
+#define H3_VERTEX_MODE 4
 
 #endif
